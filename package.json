@@ -1,0 +1,13 @@
+{
+  "name": "nails-design",
+  "version": "1.0.0",
+  "description": "Nails Design - Manicura y Pedicura en Córdoba",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["nails", "manicura", "pedicura", "cordoba"],
+  "author": "Nails Design",
+  "license": "MIT"
+}

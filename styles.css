@@ -802,6 +802,9 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        margin-top: 10rem;
+    }
     .container {
         padding: 0 15px;
     }

@@ -363,3 +363,13 @@ if (prefersReducedMotion.matches) {
     // Desactivar animaciones para usuarios que prefieren movimiento reducido
     document.documentElement.style.setProperty('--animation-duration', '0s');
 }
+
+// Abrir imágenes de la galería en una nueva pestaña al hacer clic
+document.querySelectorAll('.galeria-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (img && img.src) {
+            window.open(img.src, '_blank'); // abre en nueva pestaña
+        }
+    });
+});

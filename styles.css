@@ -48,13 +48,19 @@ body {
     transition: all 0.3s ease;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo-container {
-    width: 50%;
+    width: 20%;
     height: 4rem;
 }
 
 .logo-container img {
-    width: 30%;
+    width: 100%;
     height: 4rem;
     object-fit: contain;
     border-radius: 10px;
@@ -175,6 +181,13 @@ body {
     line-height: 1.6;
 }
 
+.cta-buttons-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -186,6 +199,7 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
+    font-size: 1rem;
 }
 
 .cta-button.primary {
@@ -422,6 +436,7 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .galeria-item:hover {

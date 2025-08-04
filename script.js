@@ -364,12 +364,27 @@ if (prefersReducedMotion.matches) {
     document.documentElement.style.setProperty('--animation-duration', '0s');
 }
 
-// Abrir imágenes de la galería en una nueva pestaña al hacer clic
+// Modal para imágenes de la galería
 document.querySelectorAll('.galeria-item').forEach(item => {
     item.addEventListener('click', () => {
         const img = item.querySelector('img');
-        if (img && img.src) {
-            window.open(img.src, '_blank'); // abre en nueva pestaña
-        }
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+
+        modal.style.display = 'block';
+        modalImg.src = img.src;
     });
+});
+
+// Cerrar el modal al hacer clic en la X
+document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('modal').style.display = 'none';
+});
+
+// También podés cerrar el modal haciendo clic fuera de la imagen
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('modal');
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
 });
